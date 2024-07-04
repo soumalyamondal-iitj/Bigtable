@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.iitj.gpc</groupId>
+	<artifactId>bigtable</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin><!-- Use latest to build recent Java applications -->
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.google.cloud</groupId>
+				<artifactId>libraries-bom</artifactId>
+				<version> 26.40.0</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.google.cloud</groupId>
+			<artifactId>google-cloud-bigtable</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.cloud</groupId>
+			<artifactId>google-cloud-bigquery</artifactId>
+		</dependency>
+		
+		<dependency>
+		  <groupId>org.apache.poi</groupId>
+		  <artifactId>poi</artifactId>
+		  <version>5.2.5</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>org.apache.poi</groupId>
+		  <artifactId>poi-ooxml</artifactId>
+		  <version>5.2.5</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>org.apache.poi</groupId>
+		  <artifactId>poi-ooxml-schemas</artifactId>
+		  <version>3.7</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>ch.qos.logback</groupId>
+		    <artifactId>logback-classic</artifactId>
+		    <version>1.5.6</version>
+		</dependency>
+		
+	</dependencies>
+</project>
